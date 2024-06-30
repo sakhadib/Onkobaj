@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Solver extends Model
 {
     use HasFactory;
+
+    protected $table = 'solvers';
+    protected $primaryKey = 'id';
 }

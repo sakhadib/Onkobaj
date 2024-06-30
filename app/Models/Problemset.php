@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Problemset extends Model
 {
     use HasFactory;
+
+    protected $table = 'problemsets';
+    protected $primaryKey = 'id';
 }
