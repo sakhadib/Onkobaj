@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\login_controller;
+
+
+Route::get('/signup', [login_controller::class, 'signup']);
+
+Route::get('/login', [login_controller::class, 'index']);
+
+
