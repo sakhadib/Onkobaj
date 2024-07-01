@@ -55,6 +55,11 @@
 /* Forms */
 
 
+.btn{
+    cursor: pointer;
+}
+
+
 .bs{
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
 }
@@ -231,6 +236,10 @@
   .hs{
     font-family: "Hind Siliguri", sans-serif;
   }
+
+  .hind{
+    font-family: 'Hind Siliguri', sans-serif;
+}
   
 
   
@@ -260,8 +269,12 @@
     border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top:2px;
     transition: all ease-in-out 0.3s;
+    
 }
+
+
 
 .nav-active {
     background-color: #b6cfba;

@@ -7,10 +7,13 @@
 
     <link rel="icon" href="/rsx/logo.svg">
 
-    <title>@yield('title')</title>
+    <title>@yield('title') - Onkobaj</title>
 
     {{-- Own CSS --}}
     <link rel="stylesheet" href="/css/util.css">
+
+    {{-- own js --}}
+    <script defer src="/js/pt.js"></script>
 
 
     {{-- Bootstrap --}}
