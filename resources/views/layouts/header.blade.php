@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#" class="df dfc jcc" style='font-family: "Hind Siliguri", sans-serif; font-weight: 500; font-size: 1.5rem; font-style: normal;'>
             <img src="/rsx/logo.svg" alt="" width="45px">
