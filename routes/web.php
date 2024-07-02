@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login_controller;
 use App\Http\Controllers\admin_controller;
 use App\Http\Controllers\problem_controller;
+use App\Http\Controllers\profile_controller;
 
 
 Route::get('/signup', [login_controller::class, 'signup']);
@@ -16,7 +17,10 @@ Route::post('/login', [login_controller::class, 'login']);
 Route::get('/logout', [login_controller::class, 'logout']);
 
 Route::get('/problemset', [problem_controller::class, 'index']);
-Route::get('/proble,/{slug}', [problem_controller::class, 'show']);
+Route::get('/problem/{slug}', [problem_controller::class, 'show']);
+Route::post('/math/submit/{slug}', [problem_controller::class, 'submit']);
+
+Route::get('/profile/{id}', [profile_controller::class, 'profile']);
 
 
 

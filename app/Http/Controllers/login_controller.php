@@ -48,7 +48,7 @@ class login_controller extends Controller
             $upozilla = Upozilla::where('name', $request->upozilla)->where('district_id', $request->district)->first();
         }
 
-        $randomNumber = rand(1, 40);
+        $randomNumber = rand(1, 15);
 
         $solver = new Solver();
         $solver->name = $request->name;
@@ -57,7 +57,7 @@ class login_controller extends Controller
         $solver->school = $request->school;
         $solver->upozilla_id = $upozilla->id;
         $solver->district_id = $request->district;
-        $solver->avatar = $randomNumber . '.jpg';
+        $solver->avatar = '1.jpg';
 
         $solver->save();
 

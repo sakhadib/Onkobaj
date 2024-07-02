@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="icon" href="/rsx/logo.svg">
-
     <title>@yield('title') - Onkobaj</title>
 
-    {{-- Own CSS --}}
     <link rel="stylesheet" href="/css/util.css">
-
-    {{-- own js --}}
     <script defer src="/js/pt.js"></script>
 
-
-    {{-- Bootstrap --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
-    {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 </head>
 <body>
+
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#" class="df dfc jcc" style='font-family: "Hind Siliguri", sans-serif; font-weight: 500; font-size: 1.5rem; font-style: normal;'>
@@ -40,35 +41,13 @@
               <li class="nav-item" id="home-nav">
                 <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> হোম</a>
               </li>
-              @if(session('solver')==null)
               <li class="nav-item" id="reg-nav">
                 <a class="nav-link" href="/signup"><i class="fa-brands fa-space-awesome"></i> রেজিস্টার</a>
               </li>
               <li class="nav-item" id="login-nav">
                 <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> লগইন</a>
               </li>
-              @endif
-              @if(session('solver') != null)
-              <li class="nav-item" id="math-nav">
-                <a class="nav-link" href="/problemset"><i class="fa-solid fa-shapes"></i> অঙ্কগুলো</a>
-              </li>
-              <li class="nav-item" id="profile-nav">
-                <a class="nav-link" href="/profile/{{session('solver')->id}}"><i class="fa-solid fa-user"></i> {{session('solver')->name}}</a>
-              </li>
-              @endif
             </ul>
           </div>
         </div>
       </nav>
-
-
-
-      <style>
-
-    </style>
-
-
-
-
-
-    
