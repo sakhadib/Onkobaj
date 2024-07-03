@@ -1,6 +1,6 @@
 @extends('layouts.math_main')
 
-@section('title', '{!!$problem->title!!}')
+@section('title', 'onkobaj')
 
 @section('math_main')
 
@@ -10,10 +10,10 @@
             <div class="row">
                 <div class="col-md-12 df dfc jcc">
                     <div class="row mb-3">
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-8">
                             <h1 class="fs-1 hind" style="font-weight: 800;">{{$problem->title}}</h1>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-4">
                             <h1 class="fs-1 text-danger text-end" style='font-family: "Play", sans-serif; font-weight: 800;' id="clock"></h1>
                         </div>
                     </div>
@@ -53,18 +53,18 @@
                     </div>
                     <div class="row mt-4">
                         <div class="col-12 col-md-6 mt-3">
-                            <button class="btn btn-outline-dark btn-lg w-100" style='font-size: 2.5rem; font-family: "Noto Sans Bengali", sans-serif;' id="op1" onclick="checkAnswer('op1')"></button>
+                            <button class="btn btn-outline-dark btn-lg w-100" style="font-size: 2.5rem; font-family: 'Kalpurush', sans-serif;" id="op1" onclick="checkAnswer('op1')"></button>
                         </div>
                         <div class="col-12 col-md-6 mt-3">
-                            <button class="btn btn-outline-dark btn-lg w-100" style='font-size: 2.5rem; font-family: "Noto Sans Bengali", sans-serif;' id="op2" onclick="checkAnswer('op2')"></button>
+                            <button class="btn btn-outline-dark btn-lg w-100" style="font-size: 2.5rem; font-family: 'Kalpurush', sans-serif;" id="op2" onclick="checkAnswer('op2')"></button>
                         </div>
                     </div>
                     <div class="row ">
                         <div class="col-12 col-md-6 mt-3">
-                            <button class="btn btn-outline-dark btn-lg w-100" style='font-size: 2.5rem; font-family: "Noto Sans Bengali", sans-serif;' id="op3" onclick="checkAnswer('op3')"></button>
+                            <button class="btn btn-outline-dark btn-lg w-100" style="font-size: 2.5rem; font-family: 'Kalpurush', sans-serif;" id="op3" onclick="checkAnswer('op3')"></button>
                         </div>
                         <div class="col-12 col-md-6 mt-3">
-                            <button class="btn btn-outline-dark btn-lg w-100" style='font-size: 2.5rem; font-family: "Noto Sans Bengali", sans-serif;' id="op4" onclick="checkAnswer('op4')"></button>
+                            <button class="btn btn-outline-dark btn-lg w-100" style="font-size: 2.5rem; font-family: 'Kalpurush', sans-serif;" id="op4" onclick="checkAnswer('op4')"></button>
                         </div>
                     </div>
                     <div class="row mt-5">
@@ -102,7 +102,7 @@
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+          <h1 class="modal-title fs-5 hind" id="exampleModalLabel">সাহায্য</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         
@@ -110,7 +110,7 @@
             <div class="markdown-here" id="content"></div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-family: 'Hind Siliguri', sans-serif">বন্ধ করি</button>
         </div>
       </div>
     </div>
@@ -126,7 +126,34 @@
         }
 
         .markdown-here{
-            font-family: "Noto Sans Bengali", sans-serif;
+            font-family: 'Kalpurush', sans-serif;
+        }
+
+        .markdown-here p{
+            font-size: 1.2rem;
+        }
+
+        .markdown-here h1{
+            font-size: 2rem;
+            color: rgb(6, 83, 0)
+        }
+
+        .markdown-here h2{
+            font-size: 1.8rem;
+            color: rgb(0, 68, 110)
+        }
+
+        .markdown-here h3{
+            font-size: 1.6rem;
+            color: rgb(126, 0, 0)
+        }
+
+        .markdown-here h4{
+            font-size: 1.4rem;
+        }
+
+        .markdown-here li{
+            font-size: 1.2rem;
         }
     </style>
 
@@ -259,6 +286,16 @@ window.onload = function() {
             convertMarkdownToHtml();
             updateMathPreview();
         });
+
+        //trigger the modal to show
+        const exampleModal = document.getElementById('exampleModal');
+        exampleModal.addEventListener('show.bs.modal', function(event) {
+            convertMarkdownToHtml();
+            updateMathPreview();
+        });
+
+        // automatically click on help
+        document.getElementById('help').click();
     });
 </script>
 

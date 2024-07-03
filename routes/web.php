@@ -17,6 +17,8 @@ Route::post('/login', [login_controller::class, 'login']);
 Route::get('/logout', [login_controller::class, 'logout']);
 
 Route::get('/problemset', [problem_controller::class, 'index']);
+Route::get('/problemset/{level}', [problem_controller::class, 'set']);
+
 Route::get('/problem/{slug}', [problem_controller::class, 'show']);
 Route::post('/math/submit/{slug}', [problem_controller::class, 'submit']);
 

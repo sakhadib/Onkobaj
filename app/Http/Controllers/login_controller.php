@@ -12,12 +12,21 @@ class login_controller extends Controller
 {
     public function index()
     {
+        if(session('solver') != null){
+            return redirect('/problemset');
+        }
+
         return view('login');
     }
 
 
     public function signup()
     {
+        if(session('solver') != null){
+            return redirect('/problemset');
+        }
+
+
         $districts = District::all();
         
         return view('register',

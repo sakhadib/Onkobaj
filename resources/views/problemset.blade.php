@@ -13,61 +13,177 @@
                 অঙ্করাজ্যে তোমাকে স্বাগতম
             </h1>
             <p class="lead hind text-center">
-                দ্রুততার সাথে অঙ্ক গুলো ঝালাই করতে এগিয়ে এসো। তোমার জন্য অপেক্ষা করছে ওযুত ওযুত নিযুত নিযুত অঙ্ক <br>কোন ধরনের অঙ্ক করতে চাও 
-                তা নির্বাচন করো এবং চালিয়ে যাও দুর্বার গতিতে
+                তোমার শ্রেণি বাছাই কর এবং তোমার জন্য অপেক্ষা করছে ওযুত ওযুত, নিযুত নিযুত অঙ্ক। তাদের সমাধান করতেই হবে তোমাকে। 
             </p>
+        </div>
+        <div class="col-12 mt-3 df jcc">
+            <a href="/rules" class="btn btn-lg btn-outline-dark" style="font-family: 'Hind Siliguri', sans-serif">নিয়মকানুন দেখে নিই</a> 
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="class cli1 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">প্রথম শ্রেণি</h1>
+                    <a href="/problemset/1" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli2 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">দ্বিতীয় শ্রেণি</h1>
+                    <a href="/problemset/2" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli3 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">তৃতীয় শ্রেণি</h1>
+                    <a href="/problemset/3" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli4 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">চতুর্থ শ্রেণি</h1>
+                    <a href="/problemset/4" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli5 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">পঞ্চম শ্রেণি</h1>
+                    <a href="/problemset/5" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli6 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">ষষ্ঠ শ্রেণি</h1>
+                    <a href="/problemset/6" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli7 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">সপ্তম শ্রেণি</h1>
+                    <a href="/problemset/7" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli8 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">অষ্টম শ্রেণি</h1>
+                    <a href="/problemset/8" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="class cli9 mt-4">
+                <div class="box">
+                    <h1 class="text-center hind text-light display-3">নবম-দশম শ্রেণি</h1> 
+                    <a href="/problemset/9" class="btn btn-lg btn-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্ক দেখুন</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 
-<div class="container">
-    <div class="row mt-5 mb-5">
-        <div class="col-md-2 col-4 df jcfs aic">
-            <div class="class-card">
-                <h1 class="fs-3 hind">
-                    প্রথম শ্রেণি
-                </h1>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        @foreach($class_1_problems as $problem)
-        <div class="col-md-4 mt-4">
-            <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title hind">{{$problem->title}}</h4>
-                  <p class="card-text hind">এটি Level {{$problem->level_id}} এর একটি সেট। এখানে ভুল উত্তরের জন্য কোন পয়েন্ট কাটা যাবে না। ইচ্ছে মত অনুশীলন কর</p>
-                  <a href="/problem/{{$problem->slug}}" class="btn btn-success" style='font-family: "Hind Siliguri", sans-serif;'>শুরু করা যাক </a>
-                </div>
-            </div>
-        </div>
-        @endforeach
-    </div>
 
-    <hr>
-    <div class="row mt-5">
-        <div class="col-md-2 col-4 df jcfs aic">
-            <div class="class-card">
-                <h1 class="fs-3 hind">
-                    দ্বিতীয় শ্রেণি
-                </h1>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        @foreach($class_2_problems as $problem)
-        <div class="col-md-4 mt-3">
-            <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title hind">{{$problem->title}}</h4>
-                  <p class="card-text hind">এটি Level {{$problem->level_id}} এর একটি সেট। এখানে ভুল উত্তরের জন্য কোন পয়েন্ট কাটা যাবে না। ইচ্ছে মত অনুশীলন কর</p>
-                  <a href="/problem/{{$problem->slug}}" class="btn btn-success" style='font-family: "Hind Siliguri", sans-serif;'>শুরু করা যাক </a>
-                </div>
-            </div>
-        </div>
-        @endforeach
-    </div>
+
+
+
+
+<style>
+    .box{
+        min-height: 30vh;
+        width: 100%;
+        backdrop-filter: brightness(0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .class{
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .cli1{
+        background-image: url('/class/1.jpg');
+    }
+    .cli2{
+        background-image: url('/class/2.jpeg');
+    }
+    .cli3{
+        background-image: url('/class/3.webp');
+    }
+    .cli4{
+        background-image: url('/class/4.jpeg');
+    }
+    .cli5{
+        background-image: url('/class/5.jpg');
+    }
+    .cli6{
+        background-image: url('/class/6.png');
+    }
+    .cli7{
+        background-image: url('/class/7.jpg');
+    }
+    .cli8{
+        background-image: url('/class/8.jpg');
+    }
+    .cli9{
+        background-image: url('/class/9.jpg');
+    }
+
+    .box:hover{
+        backdrop-filter: brightness(0.5);
+        transition: 0.5s ease-in-out;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 

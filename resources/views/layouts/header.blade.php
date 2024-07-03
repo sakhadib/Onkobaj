@@ -14,6 +14,14 @@
 
     {{-- own js --}}
     <script defer src="/js/pt.js"></script>
+    <script defer src="/js/dt.js"></script>
+
+    {{-- Data Table --}}
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script defer src="{{url('js/dt.js')}}"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
 
     {{-- Bootstrap --}}
@@ -54,6 +62,9 @@
               </li>
               <li class="nav-item" id="profile-nav">
                 <a class="nav-link" href="/profile/{{session('solver')->id}}"><i class="fa-solid fa-user"></i> {{session('solver')->name}}</a>
+              </li>
+              <li class="nav-item" id="math-nav">
+                <a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> লগআউট</a>
               </li>
               @endif
             </ul>
