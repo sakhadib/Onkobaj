@@ -57,5 +57,9 @@
 </style>
 
 
+<script>
+    document.getElementById('lb-nav').classList.add('nav-active');
+</script>
+
 
 @endsection

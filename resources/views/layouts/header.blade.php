@@ -48,7 +48,7 @@
               <li class="nav-item" id="home-nav">
                 <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> হোম</a>
               </li>
-              <li class="nav-item" id="home-nav">
+              <li class="nav-item" id="lb-nav">
                 <a class="nav-link" href="/leaderboard"><i class="fa-solid fa-ranking-star"></i> লিডারবোর্ড</a>
               </li>
               @if(session('solver')==null)
@@ -63,6 +63,14 @@
               <li class="nav-item" id="math-nav">
                 <a class="nav-link" href="/problemset"><i class="fa-solid fa-shapes"></i> অঙ্কগুলো</a>
               </li>
+              @endif
+              <li class="nav-item" id="math-nav">
+                <a class="nav-link" href="/rules"><i class="fa-solid fa-scale-balanced"></i> আইন কানুন</a> 
+              </li>
+              <li class="nav-item" id="math-nav">
+                <a class="nav-link" href="/about"><i class="fa-solid fa-mountain-sun"></i> অংকবাজের গল্প</a> 
+              </li>
+              @if(session('solver') != null)
               <li class="nav-item" id="profile-nav">
                 <a class="nav-link" href="/profile/{{session('solver')->id}}"><i class="fa-solid fa-user"></i> {{session('solver')->name}}</a>
               </li>
@@ -70,6 +78,7 @@
                 <a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> লগআউট</a>
               </li>
               @endif
+              
             </ul>
           </div>
         </div>
