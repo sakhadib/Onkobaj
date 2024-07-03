@@ -48,6 +48,9 @@
               <li class="nav-item" id="home-nav">
                 <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> হোম</a>
               </li>
+              <li class="nav-item" id="home-nav">
+                <a class="nav-link" href="/leaderboard"><i class="fa-solid fa-ranking-star"></i> লিডারবোর্ড</a>
+              </li>
               @if(session('solver')==null)
               <li class="nav-item" id="reg-nav">
                 <a class="nav-link" href="/signup"><i class="fa-brands fa-space-awesome"></i> রেজিস্টার</a>

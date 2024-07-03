@@ -1,4 +1,4 @@
-document.getElementById('profile-nav').classList.add('nav-active');
+
 
 const point = document.getElementById('point');
 let pointValue = parseInt(point.innerText);

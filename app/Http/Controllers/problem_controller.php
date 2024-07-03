@@ -73,6 +73,13 @@ class problem_controller extends Controller
 
         $submission->save();
 
+        $level = Level::where('id', $problem->level_id)->first();
+
+        $point_for_each_question = $level->points;
+
+        $solver->points += $correct * $point_for_each_question;
+        $solver->save();
+
         return redirect('/profile/' . $solver->id);
     }
 

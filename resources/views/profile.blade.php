@@ -85,7 +85,7 @@
                 <div class="row mt-4">
                     <div class="col-12">
                         <div class="table-responsive">
-                            <table data-order='[[0, "desc"]]' data-page-length='25' id="stable" class="table table-hover">
+                            <table data-order='[[0, "desc"]]' data-page-length='25' id="stable" class="table table-hover table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th class="hind">অঙ্ক</th>
@@ -123,6 +123,13 @@
 
 <link rel="stylesheet" href="/css/profile.css">
 
-<script src="/js/profile.js"></script>
+<script src="/js/profile.js"></script> 
+
+
+@if(session('solver') != null)
+<script>
+    document.getElementById('profile-nav').classList.add('nav-active');
+</script>
+@endif
 
 @endsection
