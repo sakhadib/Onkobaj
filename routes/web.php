@@ -8,7 +8,10 @@ use App\Http\Controllers\problem_controller;
 use App\Http\Controllers\profile_controller;
 use App\Http\Controllers\lb_controller as LeaderboardController;
 use App\Http\Controllers\extra_controller;
+use App\Http\Controllers\home_Controller;
 
+
+Route::get('/', [home_Controller::class, 'index']);
 
 Route::get('/signup', [login_controller::class, 'signup']);
 Route::post('/signup', [login_controller::class, 'store']);
@@ -31,6 +34,11 @@ Route::get('/leaderboard', [LeaderboardController::class, 'index']);
 
 Route::get('/rules', [extra_controller::class, 'rules']);
 
+
+
+Route::fallback(function () {
+    return view('404');
+});
 
 
 

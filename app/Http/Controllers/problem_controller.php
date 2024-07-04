@@ -25,11 +25,11 @@ class problem_controller extends Controller
         $problems = Problemset::where('for_class', $level)->get();
 
         if($level < 9 && $level > 0 && $problems == null){
-            return view('nai');
+            return redirect('/notfound');
         }
 
         if($level <= 0 || $level > 10){
-            return view('not');
+            return redirect('/notfound');
         }
 
         return view('set',
@@ -46,6 +46,11 @@ class problem_controller extends Controller
         }
         
         $problem = Problemset::where('slug', $slug)->first();
+
+        if($problem == null){
+            return redirect('/notfound');
+        }
+
         return view('problem',
         [
             'problem' => $problem

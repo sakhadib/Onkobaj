@@ -18,6 +18,12 @@ class profile_controller extends Controller
     public function profile($id)
     {
         $solver = Solver::where('id', $id)->first();
+
+        if($solver == null){
+            return redirect('/notfound');
+        }
+
+
         $upozilla = Upozilla::where('id', $solver->upozilla_id)->first();
         $district = District::where('id', $solver->district_id)->first();
 

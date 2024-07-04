@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGVDD453Q8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WGVDD453Q8');
+    </script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,6 +34,8 @@
     <script defer src="{{url('js/dt.js')}}"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
+    {{-- math --}}
+    <script defer type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -51,6 +64,9 @@
               <li class="nav-item" id="lb-nav">
                 <a class="nav-link" href="/leaderboard"><i class="fa-solid fa-ranking-star"></i> লিডারবোর্ড</a>
               </li>
+              <li class="nav-item" id="rule-nav">
+                <a class="nav-link" href="/rules"><i class="fa-solid fa-scale-balanced"></i> আইন কানুন</a> 
+              </li>
               @if(session('solver')==null)
               <li class="nav-item" id="reg-nav">
                 <a class="nav-link" href="/signup"><i class="fa-brands fa-space-awesome"></i> রেজিস্টার</a>
@@ -63,17 +79,10 @@
               <li class="nav-item" id="math-nav">
                 <a class="nav-link" href="/problemset"><i class="fa-solid fa-shapes"></i> অঙ্কগুলো</a>
               </li>
-              @endif
-              <li class="nav-item" id="math-nav">
-                <a class="nav-link" href="/rules"><i class="fa-solid fa-scale-balanced"></i> আইন কানুন</a> 
-              </li>
-              <li class="nav-item" id="math-nav">
-                <a class="nav-link" href="/about"><i class="fa-solid fa-mountain-sun"></i> অংকবাজের গল্প</a> 
-              </li>
-              @if(session('solver') != null)
               <li class="nav-item" id="profile-nav">
-                <a class="nav-link" href="/profile/{{session('solver')->id}}"><i class="fa-solid fa-user"></i> {{session('solver')->name}}</a>
-              </li>
+                <a class="nav-link" href="/profile/{{ session('solver')->id }}">
+                  <i class="fa-solid fa-user"></i> {{ explode(' ', session('solver')->name)[0] }}
+              </a></li>
               <li class="nav-item" id="math-nav">
                 <a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> লগআউট</a>
               </li>
@@ -83,12 +92,6 @@
           </div>
         </div>
       </nav>
-
-
-
-      <style>
-
-    </style>
 
 
 

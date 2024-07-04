@@ -16,16 +16,15 @@
                                 অঙ্কবাজ একটি user end ভিত্তিক অনলাইন অঙ্ক চর্চা প্ল্যাটফর্ম। এখানে বিভিন্ন স্তরের শিক্ষার্থীরা অঙ্ক সমাধান করতে পারবে। সকল অঙ্কই সয়ঙ্কৃয়ভাবে 
                                 তৎক্ষণাত প্রস্তুতকৃত। শিশুদের গণিতের প্রতি আগ্রহ ও গণিতচর্চা বৃদ্ধির জন্য একটি ছোট্ট উদ্যোগ। 
                             </p>
-                            <div class="btn-group mt-2">
-                                <a href="#" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">হোম</a>
-                                <a href="#" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">লিডারবোর্ড</a>
-                                <a href="#" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">সকল অঙ্ক</a> 
+                            
+                                <a href="/" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">হোম</a>
+                                <a href="/leaderboard" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">লিডারবোর্ড</a>
+                                <a href="/problemset" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">সকল অঙ্ক</a> 
                                 @if(session('solver')!=null)
-                                <a href="#" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">{{session('solver')->name}}</a> 
+                                <a href="/profile/{{session('solver')->id}}" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">{{session('solver')->name}}</a> 
                                 @endif
-                                <a href="#" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">নিয়মকানুন</a> 
-                                <a href="#" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্কবাজের গল্প</a>  
-                            </div>
+                                <a href="/rules" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">নিয়মকানুন</a> 
+                                <a href="https://portfolio.sakhawatadib.com" class="btn btn-outline-light" style="font-family: 'Hind Siliguri', sans-serif">অঙ্কবাজের গল্প</a>  
                         </div>
                     </div>
                 </div>

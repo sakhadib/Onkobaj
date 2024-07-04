@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGVDD453Q8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WGVDD453Q8');
+    </script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') - Onkobaj</title>
@@ -39,6 +51,12 @@
           <li class="nav-item" id="home-nav">
             <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> হোম</a>
           </li>
+          <li class="nav-item" id="lb-nav">
+            <a class="nav-link" href="/leaderboard"><i class="fa-solid fa-ranking-star"></i> লিডারবোর্ড</a>
+          </li>
+          <li class="nav-item" id="rule-nav">
+            <a class="nav-link" href="/rules"><i class="fa-solid fa-scale-balanced"></i> আইন কানুন</a> 
+          </li>
           @if(session('solver')==null)
           <li class="nav-item" id="reg-nav">
             <a class="nav-link" href="/signup"><i class="fa-brands fa-space-awesome"></i> রেজিস্টার</a>
@@ -52,12 +70,14 @@
             <a class="nav-link" href="/problemset"><i class="fa-solid fa-shapes"></i> অঙ্কগুলো</a>
           </li>
           <li class="nav-item" id="profile-nav">
-            <a class="nav-link" href="/profile/{{session('solver')->id}}"><i class="fa-solid fa-user"></i> {{session('solver')->name}}</a>
-          </li>
+            <a class="nav-link" href="/profile/{{ session('solver')->id }}">
+              <i class="fa-solid fa-user"></i> {{ explode(' ', session('solver')->name)[0] }}
+          </a></li>
           <li class="nav-item" id="math-nav">
             <a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> লগআউট</a>
           </li>
           @endif
+          
         </ul>
       </div>
     </div>

@@ -16,11 +16,15 @@
                 <p class="lead hind">
                     চল ঘুরি অঙ্করাজ্যের কোনায় কোনায়
                 </p>
+                
             </div>
             <div class="col-md-4 offset-md-1 df dfc jcc">
                 <form action="/signup" method="post">
                     @csrf
                     <h1 class="fs-5 hind mb-3 mt-5">নিচের তথ্যগুলো ইংরেজী (english) এ লিখি</h1>
+                    <p class="noto text-secondary">
+                        সাইনআপ করার মাধ্যমে আপনি এই ওয়েবসাইটের <a href="/rules" class="link-l">আইনকানুন</a> মেনে চলার জন্য অঙ্গিকারাবদ্ধ হবেন
+                    </p>
                     <div id="part-1">
                         
                         <div class="form-floating mb-3">

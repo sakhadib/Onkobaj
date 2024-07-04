@@ -10,8 +10,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center hind display-1">লিডারবোর্ড</h1>
-                <p class="text-center hind" style="font-size: 1.5rem;">দেখে নাও সবার মাঝে তোমার অবস্থান। কতটা এগিয়ে আসতে পারলে ?</p> 
+                <h1 class="hind display-3">লিডারবোর্ড</h1>
+                <p class="text-secondary hind" style="font-size: 1.1rem;">দেখে নাও সবার মাঝে তোমার অবস্থান। কতটা এগিয়ে আসতে পারলে ? 
+                    সার্চবার এ তুমি তোমার জেলা, উপজেলা স্কুলের নাম, অথবা সরাসরি কারো নাম টাইপ করেও সার্চ করতে পার। টেবিলের উপরের হেডিং গুলোতে ক্লিক করে
+                    A - Z অথবা Z - A অনুযায়ী সাজাতে পার। তাছাড়া পয়েন্ট অনুযায়ী ও সাজাতে পার।
+                </p> 
                 <hr>
             </div>
         </div>
@@ -34,7 +37,7 @@
                         @foreach($solvers as $key=>$solver)
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td>{{$solver->solver->name}}</td>
+                            <td><a href="/profile/{{$solver->solver->id}}" class="link-l">{{$solver->solver->name}}</a></td>
                             <td>{{$solver->solver->school}}, {{$solver->district}}</td>
                             <td>{{$solver->correct}}</td>
                             <td>{{$solver->wrong}}</td>
