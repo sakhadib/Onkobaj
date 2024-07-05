@@ -62,6 +62,10 @@ Route::post('/iamshuvro', [admin_controller::class, 'store']);
 Route::get('/shuvrodaadmin', [admin_controller::class, 'input']);
 Route::post('/shuvrodaadmininput', [admin_controller::class, 'inputstore']);
 
+Route::get('/shuvrodaadminview', [admin_controller::class, 'view']);
+Route::get('/shuvrodaedit/{id}', [admin_controller::class, 'edit']);
+Route::post('/shuvrodaadminedit/{id}', [admin_controller::class, 'editstore']);
+
 
 
 

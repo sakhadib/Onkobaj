@@ -22,6 +22,8 @@ class problem_controller extends Controller
             return redirect('/login');
         }
 
+        // level = forclass
+
         $problems = Problemset::where('for_class', $level)->get();
 
         if($level < 9 && $level > 0 && $problems == null){
